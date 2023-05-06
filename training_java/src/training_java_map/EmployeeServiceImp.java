@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class EmployeeInterfaceService implements EmployeeInerface {
+public class EmployeeServiceImp implements EmployeeInerface {
 
 	Map<Integer, Employee> map = new HashMap<>();
 	
