@@ -1,6 +1,8 @@
 package training_java_question10;
 
 import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.TreeSet;
 
 public class Main {
 
@@ -26,6 +28,11 @@ public class Main {
 			if(trainee != null)
 			System.out.println(trainee);
 		}
+		
+		TreeSet<Trainee> set = new TreeSet<Trainee>(new AgeComparator());
+		set.addAll(Arrays.asList(batch1));
+		set.addAll(Arrays.asList(batch2));
+		System.out.println(set);
 
 	}
 
