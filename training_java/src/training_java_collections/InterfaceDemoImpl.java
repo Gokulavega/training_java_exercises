@@ -172,4 +172,15 @@ public class InterfaceDemoImpl implements InterfaceDemo {
         System.out.println(max);
 	}
 
+	@Override
+	public void removeElements(int[] array, int key) {
+		
+		int index = 0;
+		for (int i=0; i<array.length; i++)
+            if (array[i] != key)
+                array[index++] = array[i];
+		
+		System.out.println(Arrays.toString(array));
+	}
+
 }

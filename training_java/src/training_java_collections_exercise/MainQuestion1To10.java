@@ -108,7 +108,19 @@ public class MainQuestion1To10 {
         
     //    8. Implement a Java program to find the second largest element in a list of integers.
         
-        
+        ArrayList<Integer> al = new ArrayList<Integer>();
+        al.add(1);
+        al.add(2);
+        al.add(3);
+        al.add(4);
+        System.out.println(al);
+
+        int j = Collections.max(al);
+
+        System.out.println("Max in the array is " + j);
+        al.remove(al.indexOf(j));
+        int max2 = Collections.max(al);
+        System.out.println(max2);
         
     //    9. Write a Java function to find the intersection of two lists of integers.
         
@@ -134,6 +146,7 @@ public class MainQuestion1To10 {
         int divisor = 2;
         list111.removeIf(num -> num % divisor == 0);
         System.out.println("elements from a list that are not divisible by the specific number : " + divisor + " : " + list111);
+		
 
 
 

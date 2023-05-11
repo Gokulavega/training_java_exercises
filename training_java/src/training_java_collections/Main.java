@@ -29,6 +29,10 @@ public class Main {
 		demo.arrays(a, b);
 		
 		demo.number("1 2 3 4 5");
+		
+		int[] array = { 1,3,1,2,1,4,1,5,1,3,1,7 };
+        int key = 3;
+        demo.removeElements(array, key);
 	}
 
 }

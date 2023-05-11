@@ -20,4 +20,6 @@ public interface InterfaceDemo {
 
 	void number(String numbers);
 
+	void removeElements(int[] array, int key);
+
 }
