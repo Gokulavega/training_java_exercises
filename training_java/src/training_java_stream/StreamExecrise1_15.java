@@ -12,7 +12,7 @@ public class StreamExecrise1_15 {
 	//	1. Given a list of integers, find the sum of all the even numbers.
 		
 		List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-		List<Integer> sum = numbers.parallelStream().filter(n -> n % 2 == 0).collect(Collectors.toList());
+		int sum = numbers.parallelStream().filter(n -> n % 2 == 0).mapToInt(Integer::intValue).sum();
 		System.out.println(sum);
 		
 	//	2. Given a list of strings, return a new list that contains only the strings that have a length greater than 5.
@@ -67,7 +67,9 @@ public class StreamExecrise1_15 {
 		
 	//	10. Given a list of integers, return the sum of all the numbers that are greater than 10.
 		
-		
+		List<Integer> num = Arrays.asList(1, 20, 30, 40, 50, 60, 70, 80, 90, 100);
+		int sumGreater = num.stream().filter(n -> n > 10).mapToInt(Integer::intValue).sum();
+		System.out.println(sumGreater);
 		
 	//	11. Given a list of strings, return a new list that contains only the strings that contain the letter "e".
 		
@@ -92,11 +94,14 @@ public class StreamExecrise1_15 {
 	//	14. Given a list of integers, return the product of all the numbers.
 		
 		List<Integer> number1 = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-		number1.stream().forEach(System.out::println);
+		List<Integer> numPro = number1.stream().map(n -> n * n).collect(Collectors.toList());
+		System.out.println(numPro);
 		
 	//	15. Given a list of strings, return a new list that contains only the strings that are anagrams of the word "listen".
 		
-		
+		List<String> words = Arrays.asList("silent", "listen", "enlist", "inlets");
+		List<String> anagrams = words.stream().filter(word -> Arrays.equals(word.chars().sorted().toArray() ,"listen".chars().sorted().toArray())).collect(Collectors.toList());
+		System.out.println(anagrams);
 	}
 
 }
