@@ -3,6 +3,7 @@ package training_java_stream;
 import java.io.CharArrayWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class Stream_io_charArray {
 
@@ -10,9 +11,11 @@ public class Stream_io_charArray {
 		
 		CharArrayWriter cout = new CharArrayWriter();
 		
+		Book book = new Book("131313","vikram",13.0,LocalDate.of(2003, 06, 03));
 		String str = "Example for char array writer";
 		
 		try {
+			cout.write(book.toString());
 			cout.write(str);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
