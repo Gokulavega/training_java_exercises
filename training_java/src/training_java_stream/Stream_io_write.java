@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class Stream_io_read_and_write{
+public class Stream_io_write{
 
 	public static void main(String[] args) throws IOException {
 		

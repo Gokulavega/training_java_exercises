@@ -23,8 +23,7 @@ public class Employee {
 	
 	@Override
 	public String toString() {
-		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", dateOfJoining="
-				+ dateOfJoining + ", salary=" + salary + "]";
+		return employeeId + "," + employeeName + "," + dateOfJoining + "," + salary;
 	}
 
 	public String getEmployeeId() {
